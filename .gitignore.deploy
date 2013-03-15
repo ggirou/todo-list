@@ -1,0 +1,8 @@
+.buildlog
+pubspec.lock
+*.dart.js
+*.dart.js.deps
+*.dart.js.map
+packages
+out/
+
