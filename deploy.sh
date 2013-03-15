@@ -12,16 +12,16 @@ function prepareDeploy {
 	done
 
 	# Replace .gitignore with the deploy version
-	echo mv -f .gitignore.deploy .gitignore
+	mv -f .gitignore.deploy .gitignore
 }
 
 function deploy {
 	local remote=$1
 	local branch=$2
-	echo git remote add github $remote
-	echo git add .
-	echo git commit -m 'Deploy'
-	echo git push --force github master:$branch
+	git remote add github $remote
+	git add .
+	git commit -m 'Deploy'
+	git push --force github master:$branch
 }
 
 E_BADARGS=65
