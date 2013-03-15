@@ -4,7 +4,7 @@
 function copySymLink {
 	for dir in $(find $1 -type l)
 	do
-		local rawDir=$(readlink $dir)
+		local rawDir=$(readlink -f $dir)
 		echo Copy $rawDir to $dir 
 		cp -r $rawDir $dir.tmp
 		rm -r $dir
