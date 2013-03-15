@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-function prepareDeploy {
-	# Replace package symlinks with real files
-	for dir in $(find ./packages/ -type l)
+# Replace package symlinks with real files
+function copySymLink {
+	for dir in $(find $1 -type l)
 	do
 		local rawDir=$(readlink $dir)
 		echo Copy $rawDir to $dir 
@@ -10,6 +10,11 @@ function prepareDeploy {
 		rm -r $dir
 		mv $dir.tmp $dir
 	done
+}
+
+function prepareDeploy {
+	copySymLink ./packages/
+	copySymLink .
 
 	# Replace .gitignore with the deploy version
 	mv -f .gitignore.deploy .gitignore
