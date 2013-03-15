@@ -1,0 +1,8 @@
+name:  todo_list
+description:  A sample application
+
+dependencies:
+  web_ui: any
+  browser: any
+#  js: any
+#  unittest: any

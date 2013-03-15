@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Todo list item</title>
+  <link rel="stylesheet" href="todo_list.css">
+</head>
+
+<body>
+  <element extends="li" name="x-item" constructor="ItemComponent">
+    <template>
+      <li class="x-item">
+        <input type="checkbox" bind-checked="todo.done" on-change="onTaskDone()" />
+        <span class="{{'done-${todo.done}'}}">{{todo.text}}</span>
+      </li>
+    </template>
+    <script type="application/dart" src="item_component.dart"> </script>
+  </element>
+</body>
+</html>

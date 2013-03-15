@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Todo list</title>
+  <link rel="stylesheet" href="todo_list.css">
+  <link rel="components" href="item-element.html">
+</head>
+
+<body>
+  <element extends="div" name="x-list" constructor="ListComponent">
+    <template>
+      <div>
+        <span>{{remaining()}} of {{todos.length}} remaining</span>
+        <ul class="x-list">
+          <template iterate='todo in todos'>
+            <x-item todo="{{todo}}"></x-item>
+          </template>
+        </ul>
+      </div>
+    </template>
+    <script type="application/dart" src="list_component.dart"> </script>
+  </element>
+</body>
+</html>

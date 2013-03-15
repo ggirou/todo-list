@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todos</title>
+    <link rel="stylesheet" href="todo_list.css">
+    <link rel="components" href="list-element.html">
+  </head>
+  <body>
+    <h1>Todos</h1>
+    
+    <x-list todos="{{todos}}"></x-list>
+
+    <input type="text" bind-value="input" /><input type="button" value="Add" on-click="addTask()" />
+
+    <script type="application/dart" src="todo_list.dart"></script>
+    <script type="text/javascript" src="packages/browser/dart.js"></script>
+  </body>
+</html>
