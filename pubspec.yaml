@@ -6,3 +6,5 @@ dependencies:
   browser: '>=0.4.1 <0.4.2'
 #  js: any
 #  unittest: any
+environment:
+  sdk: ">=0.4.1 <0.4.2"
