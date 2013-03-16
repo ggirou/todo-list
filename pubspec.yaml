@@ -2,7 +2,7 @@ name:  todo_list
 description:  A sample application
 
 dependencies:
-  web_ui: any
-  browser: any
+  web_ui: '>=0.4.1 <0.4.2'
+  browser: '>=0.4.1 <0.4.2'
 #  js: any
 #  unittest: any
