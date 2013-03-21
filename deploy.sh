@@ -15,9 +15,6 @@ function copySymLink {
 function prepareDeploy {
 	copySymLink ./packages/
 	copySymLink .
-
-	# Replace .gitignore with the deploy version
-	mv -f .gitignore.deploy .gitignore
 }
 
 function deploy {
@@ -25,6 +22,7 @@ function deploy {
 	local branch=$2
 	git remote add github $remote
 	git add .
+	git rm --cached $0
 	git commit -m 'Deploy'
 	git push --force github master:$branch
 }
