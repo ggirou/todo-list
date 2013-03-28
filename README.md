@@ -1,5 +1,6 @@
 Todo List
 =========
+[![Build Status](https://drone.io/github.com/ggirou/todo-list/status.png)](https://drone.io/github.com/ggirou/todo-list/latest)
 
 Todo list application written in Dart using Web UI.  
 Inspired from [AngularJS tutorial](http://angularjs.org/#add-some-control).
